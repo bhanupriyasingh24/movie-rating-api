@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinemate - Movie Explorer</title>
-    <!-- Modern Typography from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
-        <!-- The Header / Skeleton -->
         <header class="app-header">
             <h1>Cinemate</h1>
             <p>Discover the world of cinema</p>
             <div class="search-container">
                 <input type="text" id="movieSearch" placeholder="Search for a movie (e.g., Inception)..." autocomplete="off" />
                 <button id="searchBtn">Search</button>
+                
+                <!-- NEW: The Live Suggestion Dropdown -->
+                <ul id="suggestionsDropdown" class="suggestions-dropdown hidden"></ul>
             </div>
         </header>
 
-        <!-- The Empty Canvas for our Movie -->
         <main id="movieContainer">
             <div class="empty-state">
                 <span class="icon">🎬</span>
@@ -29,7 +29,6 @@
         </main>
     </div>
     
-    <!-- The Logic -->
     <script src="app.js"></script>
 </body>
 </html>
